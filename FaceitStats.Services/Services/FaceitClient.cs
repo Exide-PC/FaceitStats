@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using FaceitStats.Services.Models;
+using FaceitStats.Services.Models.FaceitApi;
 
 namespace FaceitStats.Services.Services
 {
