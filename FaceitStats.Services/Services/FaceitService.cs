@@ -5,7 +5,7 @@ namespace FaceitStats.Services.Services
 {
     public interface IFaceitService
     {
-        Task<Stats> GetPlayerStats(string player);
+        Task<StatsModel> GetPlayerStats(string player);
     }
 
     public class FaceitService : IFaceitService
@@ -17,9 +17,9 @@ namespace FaceitStats.Services.Services
             _client = client;
         }
 
-        public async Task<Stats> GetPlayerStats(string player)
+        public async Task<StatsModel> GetPlayerStats(string player)
         {
-            return new Stats()
+            return new StatsModel()
             {
                 PlayerName = "Exide"
             };

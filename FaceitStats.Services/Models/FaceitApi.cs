@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Globalization;
 using Newtonsoft.Json;
 
-namespace FaceitStats.Services.Models
+namespace FaceitStats.Services.Models.FaceitApi
 {
-    
     public class Player
     {
         [JsonProperty("avatar")]

@@ -1,6 +1,6 @@
 namespace FaceitStats.Services.Models
 {
-    public class Stats
+    public class StatsModel
     {
         public string PlayerName { get; set; }
     }
