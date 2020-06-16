@@ -1,3 +1,4 @@
+using FaceitStats.Services.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,6 +23,7 @@ namespace FaceitStats.Web
         {
 
             services.AddControllersWithViews();
+            services.RegisterFaceitStatsServices();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
