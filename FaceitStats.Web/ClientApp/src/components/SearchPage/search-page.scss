@@ -3,7 +3,11 @@
     justify-content: center;
     margin-top: 300px;
 
-    input {
-        width: 300px;
+    .content-wrapper {
+        width: 350px;
+
+        * {
+            margin-bottom: 5px;
+        }
     }
 }

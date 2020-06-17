@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import { Input } from 'reactstrap';
+import { Input, Button } from 'reactstrap';
 
 const Search = () => {
 
@@ -8,11 +8,16 @@ const Search = () => {
     
     return (
         <div className='search-container'>
-            <Input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder='Profile name'
-            />
+            <div className='content-wrapper'>
+                <Input
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder='Profile name'
+                />
+                <Button>
+                    Search
+                </Button>
+            </div>
         </div>
     )
 }
