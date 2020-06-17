@@ -13,10 +13,13 @@ const Search = ({history}: Props) => {
 
     return (
         <div className='search-container'>
+            <h1>
+                Faceit Stats
+            </h1>
             <div className='content'>
                 <Input
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value.trim())}
                     placeholder='Profile name'
                 />
                 <Button
