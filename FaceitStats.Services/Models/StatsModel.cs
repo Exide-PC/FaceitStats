@@ -22,9 +22,7 @@ namespace FaceitStats.Services.Models
         public int RoundsWon { get; set; }
         public int RoundsLost { get; set; }
         public int Kills { get; set; }
-        public int Deats { get; set; }
-        public double KR { get; set; }
-        public double KDR { get; set; }
+        public int Deaths { get; set; }
         public int AvgLevels { get; set; }
         public DateTime Date { get; set; }
     }
