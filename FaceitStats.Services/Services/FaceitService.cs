@@ -21,7 +21,12 @@ namespace FaceitStats.Services.Services
         {
             return new StatsModel()
             {
-                PlayerName = "Exide"
+                Player = new PlayerInfo
+                {
+                    Avatar = "dummy",
+                    Name = "Exide",
+                    Elo = 3001
+                }
             };
         }
     }
