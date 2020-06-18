@@ -1,3 +1,11 @@
 .stats-content {
     margin-top: 50px;
+
+    table {
+        width: 100%;
+        
+        th, td {
+            text-align: center;
+        }
+    }
 }

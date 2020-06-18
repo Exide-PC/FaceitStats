@@ -4,6 +4,8 @@ import { withRouter, RouteComponentProps } from 'react-router';
 import { loadStats } from '../../services/api';
 import { StatsModel } from '../../services/models';
 import ClipLoader from "react-spinners/ClipLoader";
+import StatsTable from './MatchTable';
+import MatchTable from './MatchTable';
 
 type Props = RouteComponentProps<{ player: string }>;
 
@@ -13,7 +15,7 @@ const StatsPage = (props: Props) => {
 
     //------------------ State ------------------
     const [name, setName] = useState<string>('');
-    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
     const [stats, setStats] = useState<StatsModel>();
 
     //----------------- Effects -----------------
@@ -24,10 +26,10 @@ const StatsPage = (props: Props) => {
     }, [player]);
 
     const loadData = async () => {
-        // setIsLoading(true);
+        setIsLoading(true);
         const stats = await loadStats(player);
         setStats(stats);
-        // setIsLoading(false);
+        setIsLoading(false);
     }
 
     return (
@@ -37,16 +39,9 @@ const StatsPage = (props: Props) => {
                     <ClipLoader color='orange' size={100}/>
                 </div>
             ) : (
-                <>
-                    <Input
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder='Profile name'
-                    />
-                    <Button>
-                        Search
-                    </Button>
-                </>
+                stats && (
+                    <MatchTable matches={stats.matches}/>
+                )
             )}
         </div>
     )
