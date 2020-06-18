@@ -9,6 +9,10 @@
             text-align: center;
         }
 
+        th {
+            text-transform: uppercase;
+        }
+
         tbody {
             tr:nth-child(odd) {
                 background: $gray-900;
@@ -16,12 +20,16 @@
         }
 
         .label {
-            &-won {
+            &-good {
                 color: $green;
             }
 
-            &-lost {
+            &-bad {
                 color: $red;
+            }
+
+            &-normal {
+                color: $blue;
             }
         }
     }

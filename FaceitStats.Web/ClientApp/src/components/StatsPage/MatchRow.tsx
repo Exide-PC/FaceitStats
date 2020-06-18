@@ -5,15 +5,23 @@ interface Props {
     match: MatchTotalStats;
 }
 
+const good = 'label-good';
+const normal = 'label-normal';
+const bad = 'label-bad';
+
 const MatchRow = ({match}: Props) => {
     const {map, roundsWon, roundsLost, kills, deaths, avgLevels, date } = match;
+
+    const kd = kills / deaths;
+    const kpr = kills / (roundsWon + roundsLost);
+
     return (
         <tr>
             <td>
                 {map}
             </td>
             <td>
-                <span className={roundsWon < roundsLost ? 'label-won' : 'label-lost'}>
+                <span className={roundsWon > roundsLost ? good : bad}>
                     {roundsWon}/{roundsLost}
                 </span>
             </td>
@@ -24,10 +32,14 @@ const MatchRow = ({match}: Props) => {
                 {deaths}
             </td>
             <td>
-                {kills / deaths}
+                <span className={kd >= 1.1 ? good : kd > 1 ? normal : bad}>
+                    {kd}
+                </span>
             </td>
             <td>
-                {kills / (roundsWon + roundsLost)}
+                <span className={kpr >= 0.9 ? good : kpr > 0.7 ? normal : bad}>
+                    {kpr}
+                </span>
             </td>
             <td>
                 {avgLevels}
