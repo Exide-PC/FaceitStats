@@ -13,10 +13,9 @@ const MatchRow = ({match}: Props) => {
                 {map}
             </td>
             <td>
-                {roundsWon}
-            </td>
-            <td>
-                {roundsLost}
+                <span className={roundsWon < roundsLost ? 'label-won' : 'label-lost'}>
+                    {roundsWon}/{roundsLost}
+                </span>
             </td>
             <td>
                 {kills}

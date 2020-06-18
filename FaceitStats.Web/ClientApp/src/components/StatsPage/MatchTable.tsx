@@ -15,15 +15,11 @@ const MatchTable = ({matches}: Props) => {
                         [
                             {
                                 name: 'Map',
-                                width: '10%'
+                                width: '15%'
                             },
                             {
-                                name: 'Rounds won',
-                                width: '10%'
-                            },
-                            {
-                                name: 'Rounds lost',
-                                width: '10%'
+                                name: 'Score',
+                                width: '15%'
                             },
                             {
                                 name: 'Kills',

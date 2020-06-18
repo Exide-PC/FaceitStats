@@ -17,6 +17,33 @@ const statsMock: StatsModel = {
             map: 'de_mirage',
             roundsWon: 16,
             roundsLost: 0
+        },
+        {
+            avgLevels: 15,
+            date: new Date(),
+            kills: 30,
+            deaths: 1,
+            map: 'de_mirage',
+            roundsWon: 16,
+            roundsLost: 0
+        },
+        {
+            avgLevels: 15,
+            date: new Date(),
+            kills: 30,
+            deaths: 1,
+            map: 'de_mirage',
+            roundsWon: 16,
+            roundsLost: 0
+        },
+        {
+            avgLevels: 15,
+            date: new Date(),
+            kills: 30,
+            deaths: 1,
+            map: 'de_mirage',
+            roundsWon: 16,
+            roundsLost: 0
         }
     ]
 }

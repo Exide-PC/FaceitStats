@@ -3,9 +3,26 @@
 
     table {
         width: 100%;
+        font-size: 1.1em;
         
         th, td {
             text-align: center;
+        }
+
+        tbody {
+            tr:nth-child(odd) {
+                background: $gray-900;
+            }
+        }
+
+        .label {
+            &-won {
+                color: $green;
+            }
+
+            &-lost {
+                color: $red;
+            }
         }
     }
 }
